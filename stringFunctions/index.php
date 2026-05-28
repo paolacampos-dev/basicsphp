@@ -51,7 +51,7 @@ $output  = str_replace('world', 'Universe', $string); // hello Universe
         <div class="bg-white rounded-lg shadow-md p-6 mt-6">
             <!-- Output -->
             <p class-"text-xl">
-                <?= $output ?>
+                <?= $output ?></p>
         </div>
     </div>
 </body>

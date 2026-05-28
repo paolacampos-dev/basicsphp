@@ -25,10 +25,6 @@ $result = (bool) $number1; //bool(true)
 $result = (bool) $number1; //bool(true) but if the number is 0 will be converted to false
 
 
-
-
-
-
 var_dump($result);
 
 ?>
