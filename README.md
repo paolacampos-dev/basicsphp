@@ -10,3 +10,9 @@ inside a function needs to be closed afterwrads and before the end of the functi
 echo '</pre>'
 
 die(); will kill anyhting that comes afterwards. It will finish here
+
+shorcut to create html --> h2.text-xl.font-semibold then press enter and it will format itself
+
+<?=  means echo >
+
+PHP documentation: (https://www.php.net/manual/en/ref. .php)
