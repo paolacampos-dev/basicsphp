@@ -1,6 +1,8 @@
 Run the terminal: php -S localhost:8000
 then save and refresh the browser
 
+// .grid-item (press enter) --> will complete as a CSS class => <div class="grid-item"></div>
+
 to write in php: <?php         ?> (Execute in the server and sent to the browser what interprets)
 
 echo is used as print <?php   echo 'hello'; ?> the ; marks the end of the instruction ==> shortcut <?= '   '?>
