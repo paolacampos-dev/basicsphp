@@ -85,8 +85,8 @@ $output = number_format(1234567.197412, 2, '.', ',')
             echo $num1 + $num2 . '<br>';
             echo $num1 - $num2 . '<br>';
             echo $num1 * $num2 . '<br>';
-            echo $num1 / $num2 . '<br>';
-            echo $num1 % $num2 . '<br>';
+            echo $num1 / $num2 . '<br>'; // divide
+            echo $num1 % $num2 . '<br>'; //leftover
             ?>
         </div>
     </div>

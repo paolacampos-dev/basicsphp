@@ -32,7 +32,15 @@ Challenge 2: Colors array
 
 echo '<h3>Colors Array</h3>';
 
-
+$colors = ['white', 'red', 'blue'];
+echo $output = rsort($colors); // 1 as true
+echo "<pre>"; // needs to be inside quotes bevause they are strings as HTML
+print_r($colors); //Array ( [0] => white [1] => red [2] => blue )
+$output = array_pop($colors);
+echo $output; //Array ( [0] => white [1] => red [2] => blue ) blue
+echo "<br>";
+var_dump($colors);
+echo "</pre>";
 
 /*
 Challenge 3: Job listings
@@ -47,3 +55,33 @@ Challenge 3: Job listings
 */
 
 echo '<h3>Job Listings</h3>';
+
+$jobListings = [
+    [
+        'jobTitle' => 'PHP Developer',
+        'company' => 'Tech Solutions',
+        'location' => 'Manchester',
+        'salary' => '£35,000'
+    ],
+    [
+        'jobTitle' => 'WordPress Developer',
+        'company' => 'Creative Agency',
+        'location' => 'London',
+        'salary' => '£40,000'
+    ],
+    [
+        'jobTitle' => 'Frontend Developer',
+        'company' => 'Web Works',
+        'location' => 'Liverpool',
+        'salary' => '£32,000'
+    ]
+];
+
+foreach ($jobListings as $job) {
+    echo "<pre>";
+    echo "Job Title: " . $job['jobTitle'] . "<br>";
+    echo "Company: " . $job['company'] . "<br>";
+    echo "Location: " . $job['location'] . "<br>";
+    echo "Salary: " . $job['salary'] . "<br><br>";
+    echo "</pre>";
+}

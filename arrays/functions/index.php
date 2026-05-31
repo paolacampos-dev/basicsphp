@@ -7,7 +7,6 @@ $users = ['user2', 'user1', 'user3'];
 //count() --> to get the length
 $output = count($ids); //5
 
-
 //Sort()  --> manipulates the array(in order = ASC or in alphabetic order)
 $output = sort($ids);
 $output = sort($users);
@@ -19,9 +18,9 @@ rsort($users);
 //arrray_push()
 array_push($ids, 100); // 100 added to the end of the array
 
-//array_unshift(array, item) // it will add the item at the begining of the array
-//array_pop() --> it will take the last item off the array
-//array_shift() --> it will remove the first item off the array
+//array_unshift($array, item); // it will add the item at the begining of the array
+//array_pop(); // it will take the last item off the array
+//array_shift(); // it will remove the first item off the array
 
 //array_slice(arrayName, indexWhereToStart(offset), theLengthToMoveTrough)
 $ids2 = array_slice($ids, 2, 3);
@@ -30,7 +29,7 @@ $ids2 = array_slice($ids, 2, 3);
 //array_splice() --> return a portion of the array and returns something else
 array_splice($ids, 1, 1, 'New Id'); // the item 1 has been replaced for the string
 
-//array_sum() --> adds all the items fromt the array
+//array_sum() --> adds all the items from the array
 $output = 'Sum of IDs: ' . array_sum($ids); // Sum of Ids is: 214
 
 //array_search(nameOfTheItemtoSearch, arrayName)

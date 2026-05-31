@@ -1,3 +1,9 @@
+<?php
+$output = null;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +24,7 @@
     </header>
     <div class="container mx-auto p-4 mt-4">
         <div class="bg-white rounded-lg shadow-md p-6">
-            <!-- <?= $output ?> -->
+            <?= $output ?>
         </div>
     </div>
 </body>
