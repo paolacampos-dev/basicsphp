@@ -2,6 +2,7 @@ Run the terminal: php -S localhost:8000
 then save and refresh the browser
 
 // .grid-item (press enter) --> will complete as a CSS class => <div class="grid-item"></div>
+// span.text-xs.text-white.bg-blue-500.rounded-full.px-2.py-1.ml-2 (press enter) --><span class="text-xs text-white bg-blue-500 rounded-full px-2 py-1 ml-2"></span> (Settings --> settings --> Emmet include languages -php-html)
 
 to write in php: <?php         ?> (Execute in the server and sent to the browser what interprets)
 
@@ -18,3 +19,6 @@ shorcut to create html --> h2.text-xl.font-semibold then press enter and it will
 <?=  means echo >
 
 PHP documentation: (https://www.php.net/manual/en/ref. .php)
+
+
+<?php  ?>
