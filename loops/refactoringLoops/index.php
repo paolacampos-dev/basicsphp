@@ -39,7 +39,7 @@ $listings = [
         'description' => 'We are looking for a friendly customer service representative to assist customers and resolve issues.',
         'salary' => 40000,
         'location' => 'New York',
-        'tags' => ['Customer Support', 'Communication', 'Problem Solving']
+        'tags' => []
     ]
 ];
 
@@ -65,9 +65,12 @@ $listings = [
 
     <div class="container mx-auto p-4 mt-4">
 
-        <?php foreach ($listings as $listing): ?>
+        <?php
+
+        /* Refactoring:
+        foreach ($listings as $listing): ?>
             <div class="my-4">
-                <div class="bg-white rounded-lg shadow-md">
+                <div class="bg-blue rounded-lg shadow-md">
                     <div class="p-4">
 
                         <h2 class="text-xl font-semibold">
@@ -98,7 +101,89 @@ $listings = [
                     </div>
                 </div>
             </div>
-        <?php endforeach; ?>
+        <?php endforeach;
+        */
+
+        /*
+        foreach ($listings as $index => $job): ?>
+            <div class="my-4">
+                <div class="
+                    <?php if ($index % 2 === 0):   ?>
+                        bg-blue-100
+                    <?php else : ?>
+                        bg-white
+                    <?php endif; ?>
+                rounded-lg shadow-md">
+                    <div class="p-4">
+
+                        <h2 class="text-xl font-semibold">
+                            <?= $job['title'] ?>
+                        </h2>
+
+                        <p class="text-gray-700 text-lg mt-2">
+                            <?= $job['description'] ?>
+                        </p>
+
+                        <ul class="mt-4">
+                            <li class="mb-2">
+                                <strong>Salary:</strong>
+                                $<?= number_format($job['salary']) ?>
+                            </li>
+
+                            <li class="mb-2">
+                                <strong>Location:</strong><?= $job['location'] ?>
+                                <?php if ($job['location'] === 'New York') : ?>
+                                    <span class="text-xs text-white bg-blue-500 rounded-full px-2 py-1 ml-2">Local</span>
+                                <?php endif; ?>
+                            </li>
+
+                            <!-- if a label is empty as in tags dont show label -->
+                            <?php if (!empty($job['tags'])) : ?>
+                                <li class="mb-2">
+                                    <strong>Tags:</strong>
+                                    <?= implode(', ', $job['tags']) ?>
+                                </li>
+                            <?php endif; ?>
+                        </ul>*/
+
+        // refactoring with Ternary Operator:
+        foreach ($listings as $index => $job): ?>
+            <div class="my-4">
+                <div class="rounded-lg shadow-md 
+                                    <?= $index % 2 === 0 ? 'bg-blue-100' :  'bg-white'
+                                    ?>
+                                ">
+                    <div class="p-4">
+
+                        <h2 class="text-xl font-semibold">
+                            <?= $job['title'] ?>
+                        </h2>
+
+                        <p class="text-gray-700 text-lg mt-2">
+                            <?= $job['description'] ?>
+                        </p>
+
+                        <ul class="mt-4">
+                            <li class="mb-2">
+                                <strong>Salary:</strong>
+                                $<?= number_format($job['salary']) ?>
+                            </li>
+
+                            <li class="mb-2">
+                                <strong>Location:</strong><?= $job['location'] ?>
+                                <?= $job['location'] === 'New York' ? '<span class="text-xs text-white bg-blue-500 rounded-full px-2 py-1 ml-2">Local</span>' : '<span class="text-xs text-white bg-green-500 rounded-full px-2 py-1 ml-2">Remote</span>' ?>
+                            </li>
+
+                            <!-- if a label is empty as in tags dont show label -->
+                            <?= (!empty($job['tags'])) ? '<li class="mb-2">
+                                    <strong>Tags:</strong>' . implode(', ', $job['tags']) . '</li>' : '' ?>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        <?php endforeach;
+        ?>
 
     </div>
 
