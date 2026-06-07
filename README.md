@@ -1,3 +1,6 @@
+Udemy
+**PHP from scratch course - Brad Traversy**
+
 Run the terminal: php -S localhost:8000
 then save and refresh the browser
 
@@ -16,7 +19,7 @@ die(); will kill anyhting that comes afterwards. It will finish here
 
 shorcut to create html --> h2.text-xl.font-semibold then press enter and it will format itself
 
-<?=  means echo >
+<?=  means ==> php echo >
 
 PHP documentation: (https://www.php.net/manual/en/ref. .php)
 

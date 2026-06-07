@@ -18,7 +18,7 @@ Hints:
 
 for ($i = 1; $i <= 100; $i++) {
 
-    if ($i % 3 === 0 && $i % 5 === 0) {
+    if ($i % 3 === 0 && $i % 5 === 0) {  // or ($i % 15 === 0)
         echo 'FizzBuzz<br>';
     } elseif ($i % 3 === 0) {
         echo 'Fizz<br>';
